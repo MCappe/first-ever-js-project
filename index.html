@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supernatural Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <main>
+
+            <div class="supernaturalTitle"></div> 
+            
+        </main> 
+
+    <!-- https://i.imgflip.com/gwose.jpg -->
+
+    <!-- https://i.imgflip.com/3u4nl4.png -->
+
+    <!-- https://i.imgflip.com/12vh2f.jpg -->
+
+    <!-- https://i.imgflip.com/16mapw.jpg -->
+
+    <!-- https://i.imgflip.com/1r1f86.jpg -->
+
+    <!-- https://i.imgflip.com/optxl.jpg -->
+
+    <!-- https://i.imgflip.com/1knhk0.jpg -->
+
+    <!-- https://i.imgflip.com/1ie3pp.jpg -->
+
+    <!-- https://i.imgflip.com/18rpsu.jpg -->
+
+    <!-- https://i.imgflip.com/3u4nl4.png -->
+
+
+        <footer>
+
+            <a href="https://junocollege.com/" target="_blank">Created at Juno College</a>
+
+        </footer>
+
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            alert("Let\'s test your Supernatural knowledge");
+        
+
+            var questions = [
+                {
+                    prompt: 'What car does Dean drive?\n(a) Buick LeSabre\n\(b) Chevy Impala\n(c) Honda Civic',
+                    answer: 'b'
+                },
+                {
+                    prompt: 'What is Sam and Dean\'s mother\'s name?\n(a) Mary\n\(b) Jodi\n(c) Samantha',
+                    answer: 'a'
+                },
+                {
+                    prompt: 'What is Dean\'s favourite food?\n(a) Pizza\n\(b) Pie\n(c) Cheeseburgers',
+                    answer: 'b'
+                },
+                {
+                    prompt: 'Who controls the hellhounds?\n(a) Lucifer\n\(b) Castiel\n(c) Crowley',
+                    answer: 'c'
+                },
+                {
+                    prompt: 'Who is Chuck?\n(a) God\n\(b) The boys dad \n(c) The King of Hell',
+                    answer: 'a'
+                }
+            ]
+
+            var score = 0;
+
+            for(var i=0; i < questions.length; i++){
+                var response = window.prompt(questions[i].prompt)
+                if(response == questions[i].answer){
+                    score++;
+                    alert('Correct');
+                } else {
+                    alert('Wrong!');
+                }
+            }
+
+            alert('you got' + score + "/" + questions.length);
+
+            $('div').removeClass('supernaturalTitle').addClass('newBackground')
+            
+        });
+
+    
+    </script>
+    
+</body>
+
+</html>
